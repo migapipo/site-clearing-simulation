@@ -1,0 +1,48 @@
+plugins {
+    id 'java'
+}
+
+jar{
+    manifest {
+        attributes('Main-Class': 'app.Main')
+    }
+}
+
+tasks.withType(Test) {
+    scanForTestClasses = false
+    include "**/**/*Test.class" // whatever Ant pattern matches your test class files
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
+
+ext.junitJupiterVersion = '5.1.0'
+
+dependencies {
+    testCompile "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+    testCompile "org.junit.jupiter:junit-jupiter-params:${junitJupiterVersion}"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    testImplementation('junit:junit:4.13')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test'
+        }
+    }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.BulldozerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-10-13T12:05:58" hostname="XiaoyumatoMacBook-Pro.local" time="0.024">
+  <properties/>
+  <testcase name="executeAndValidateCustomisedTest()" classname="app.BulldozerTest" time="0.007"/>
+  <testcase name="OutOfRowBoundaryExceptionTest()" classname="app.BulldozerTest" time="0.003"/>
+  <testcase name="executeAndValidateSampleTest()" classname="app.BulldozerTest" time="0.003"/>
+  <testcase name="OutOfColBoundaryExceptionTest()" classname="app.BulldozerTest" time="0.002"/>
+  <testcase name="CutTreeExceptionTest()" classname="app.BulldozerTest" time="0.002"/>
+  <system-out><![CDATA[o o t o o o o o o o
+o o o o o o o T o o
+r r r o o o o T o o
+r r r r o o o o o o
+r r r r r t o o o o
+o o t o o o o o o o
+o o o o o o o T o o
+r r r o o o o T o o
+r r r r o o o o o o
+r r r r r t o o o o
+o o t o o o o o o o
+o o o o o o o T o o
+r r r o o o o T o o
+r r r r o o o o o o
+r r r r r t o o o o
+o o t o o o o o o o
+o o o o o o o T o o
+r r r o o o o T o o
+r r r r o o o o o o
+r r r r r t o o o o
+o o t o o o o o o o
+o o o o o o o T o o
+r r r o o o o T o o
+r r r r o o o o o o
+r r r r r t o o o o
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

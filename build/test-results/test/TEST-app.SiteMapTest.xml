@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.SiteMapTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-13T12:05:58" hostname="XiaoyumatoMacBook-Pro.local" time="0.011">
+  <properties/>
+  <testcase name="SiteMapTest()" classname="app.SiteMapTest" time="0.011"/>
+  <system-out><![CDATA[o o t o o o o o o o
+o o o o o o o T o o
+r r r o o o o T o o
+r r r r o o o o o o
+r r r r r t o o o o
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
