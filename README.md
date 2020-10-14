@@ -32,14 +32,16 @@ input/input1.txt
 
 **2.** If it runs successfully, a statement will be output first:
 
-``` "To start the application, please enter the correct file path to open (with extension like fileName.txt) : "```
+```bash
+To start the application, please enter the correct file path to open (with extension like fileName.txt) : 
+```
+As a trainee, you need to input a valid site map file name with extension like fileName.txt (e.g "input/sitemap
+.txt") to start the application. You can also put different custom sitemap files in the ```input``` folder for further
+ usage.
 
-**3.** As a trainee, you need to input a valid site map file name with extension like fileName.txt (e.g "input/sitemap
-.txt") to start the application. You can also put a custom sitemap file in the ```input``` folder for further usage.
 
-
-**4.** The application will start with the site map file name provided and displayed the site map on the console for the
- trainee with a welcome message: 
+**3.** Once the input file name input, the application will start with the site map file provided and displayed
+it on the console for the trainee with a welcome message: 
  
  ```bash
 Welcome to the Aconex site clearing simulator. This is a map of the site:
@@ -54,14 +56,27 @@ Welcome to the Aconex site clearing simulator. This is a map of the site:
      
      (l)eft, (r)ight, (a)dvance <n>, (q)uit:
 ```
- Note: The input site map should be defined with one character per square of the site. Each row must have the
- same number of characters. Plain land is marked with the letter ‘o’, rocky land is marked with the letter ‘r’, 
- removable trees are marked with the letter ‘t’, and trees that must be preserved are marked with the letter ‘T’. 
- The initial position of the bulldozer will be outside of the site, to the left of the top left (northwest) square
-  of the site, facing towards the east. The bulldozer will never be blocked (by an unremovable tree) from entering
-   the site by driving east.
+
+
+<details><summary>Input File Requirements</summary>
+
+The input site map should be defined with one character per square of the site. Each row must have the same number of
+ characters. 
+</details>
+
+
+<details><summary>Square Types on Site Map </summary>
+ - Plain land is marked with the letter ‘o'
+ - rocky land is marked with the letter ‘r’
+ - removable trees are marked with the letter ‘t’
+ - trees that must be preserved are marked with the letter ‘T’
+ </details>
+ 
+ The initial position of the bulldozer will be outside of the site, to the left of the top left (northwest) square of
+  the site, facing towards the east. Initial position (-1,0), facing Direction EAST. The bulldozer will never be blocked
+   (by an unremovable tree) from entering the site by driving east.
   
-**5.** The available commands are: ```(a) <n>```, ```l```,```r```,```q```.
+**4.** The available commands are: ```(a) <n>```, ```l```,```r```,```q```.
  - Advance ```(a) <n>```: this command takes a positive integer parameter to define the number of squares the bulldozer should move
   forwards (in whatever direction it is currently facing); (e.g.```a 4```, ```aa 4``` are both valid advance commands)
  - Left
@@ -71,7 +86,7 @@ Welcome to the Aconex site clearing simulator. This is a map of the site:
  - Quit 
  ```q```: end the simulation.
  
-**6.** Commands are executed as soon as the user presses “Enter” until one of the following simulation ending events
+**5.** Commands are executed as soon as the user presses “Enter” until one of the following simulation ending events
   occurs:
    - there is an attempt to navigate beyond the boundaries of the site; The application will output the last position
     where the bulldozer stays on the map. 
@@ -88,7 +103,8 @@ Welcome to the Aconex site clearing simulator. This is a map of the site:
    - the trainee enters the quit command.
 
     The simulation has ended at your request.
-**7.** The simulation ends and commands are no longer accepted. A list of commands entered, and an itemised expense report
+**6.** The simulation ends and commands are no longer accepted. A list of commands entered, and an itemised expense
+ report
  will be displayed on the console.
  
  ```
