@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="app.SiteMapTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-13T12:05:58" hostname="XiaoyumatoMacBook-Pro.local" time="0.011">
+<testsuite name="app.SiteMapTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-14T02:24:31" hostname="XiaoyumatoMacBook-Pro.local" time="0.02">
   <properties/>
-  <testcase name="SiteMapTest()" classname="app.SiteMapTest" time="0.011"/>
+  <testcase name="SiteMapTest()" classname="app.SiteMapTest" time="0.02"/>
   <system-out><![CDATA[o o t o o o o o o o
 o o o o o o o T o o
 r r r o o o o T o o

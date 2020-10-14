@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="app.CommandsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-13T12:05:58" hostname="XiaoyumatoMacBook-Pro.local" time="0.021">
+<testsuite name="app.CommandsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-10-14T02:24:31" hostname="XiaoyumatoMacBook-Pro.local" time="0.01">
   <properties/>
-  <testcase name="validateCommandAndConstruct()" classname="app.CommandsTest" time="0.021"/>
+  <testcase name="validateCommandAndConstruct()" classname="app.CommandsTest" time="0.01"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

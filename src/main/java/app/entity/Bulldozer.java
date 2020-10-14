@@ -104,7 +104,7 @@ public class Bulldozer {
         }
         // case 4: "T"
         if (siteMap[r][c].equals(SquareType.TREE_PRESERVED.getSquareType())) {
-            throw new CutTreeException(String.format("the current location(%d, %d) is a protected tree", r, c));
+            throw new CutTreeException(String.format("Current location(%d, %d) is a protected tree", r, c));
         }
         return;
     }

@@ -26,7 +26,7 @@ input/input1.txt
 </details>
 
 
-## Site Clearing Simulation Usage
+### Site Clearing Simulation Usage
 
 **1.** Follow above steps to build and run this application.
 
@@ -77,11 +77,13 @@ Welcome to the Aconex site clearing simulator. This is a map of the site:
     where the bulldozer stays on the map. 
     e.g.
     
-    Bulldozer is out of boundary at (5, 1)
+    The Bulldozer is out of boundary at (5, 1).
+    The simulation has ended at your request.
    - there is an attempt to remove a tree that is protected; The application will output the position of the protected 
     tree which the bulldozer is attempting to remove.
       
-    the current location(0, 4) is a protected tree 
+    Current location(0, 4) is a protected tree 
+    The simulation has ended at your request.
     
    - the trainee enters the quit command.
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="app.BulldozerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-10-13T12:05:58" hostname="XiaoyumatoMacBook-Pro.local" time="0.024">
+<testsuite name="app.BulldozerTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2020-10-14T02:24:31" hostname="XiaoyumatoMacBook-Pro.local" time="0.062">
   <properties/>
-  <testcase name="executeAndValidateCustomisedTest()" classname="app.BulldozerTest" time="0.007"/>
-  <testcase name="OutOfRowBoundaryExceptionTest()" classname="app.BulldozerTest" time="0.003"/>
-  <testcase name="executeAndValidateSampleTest()" classname="app.BulldozerTest" time="0.003"/>
-  <testcase name="OutOfColBoundaryExceptionTest()" classname="app.BulldozerTest" time="0.002"/>
-  <testcase name="CutTreeExceptionTest()" classname="app.BulldozerTest" time="0.002"/>
+  <testcase name="executeAndValidateCustomisedTest()" classname="app.BulldozerTest" time="0.017"/>
+  <testcase name="OutOfRowBoundaryExceptionTest()" classname="app.BulldozerTest" time="0.012"/>
+  <testcase name="executeAndValidateSampleTest()" classname="app.BulldozerTest" time="0.011"/>
+  <testcase name="OutOfColBoundaryExceptionTest()" classname="app.BulldozerTest" time="0.006"/>
+  <testcase name="CutTreeExceptionTest()" classname="app.BulldozerTest" time="0.006"/>
   <system-out><![CDATA[o o t o o o o o o o
 o o o o o o o T o o
 r r r o o o o T o o
