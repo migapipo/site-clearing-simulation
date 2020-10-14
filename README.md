@@ -124,11 +124,14 @@ Thank you for using the Aconex site clearing simulator.
 #### Documentation
 
 <details><summary>Approach</summary>
+
+
 - Used a TDD (Test Driven Design) Approach within IntelliJ IDEA
 - Java 8, Junit 5 
 - Each source file has a javadoc comment which explains its functions and what part that file plays in the
  solution.
 - Each main feature/capability of this program has a corresponding test due to the TDD approach that has been followed.
+
 </details>
 
 
@@ -173,10 +176,10 @@ Thank you for using the Aconex site clearing simulator.
 
     - ```Commands```
     According to available commands: ```(a) <n>```, ```l```,```r```,```q```.  They can be classified into 3 different
-     types: 
-     1. Advance Command: ```AdvanceCommand```
-     2. Direction Command: ```DirectionCommand```
-     3. Quit Command 
+    types: 
+        1. Advance Command: ```AdvanceCommand```
+        2. Direction Command: ```DirectionCommand```
+        3. Quit Command 
 
   As there are 3 different types commands for processing in this application, polymorphism and inheritance have been
    used here to increase code reusability. ```Commands``` class is the parent class, while ```DirectionCommand``` and
