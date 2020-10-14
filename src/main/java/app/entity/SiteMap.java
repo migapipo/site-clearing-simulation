@@ -54,7 +54,7 @@ public class SiteMap {
     }
 
 	/**
-	 * encode coordinates (x, y) to an integer to represent each location on the siteMap
+	 * Encode coordinates (x, y) to an integer to represent each location on the siteMap
 	 * location = x * ColumnNumber + y
 	 * @param x
 	 * @param y

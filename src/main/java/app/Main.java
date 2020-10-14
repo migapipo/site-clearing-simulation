@@ -40,8 +40,8 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         /*
-         * Ask user to enter filename with extension to open and read its content (The
-         * file should include the site map information)
+         * Ask user to enter filename with extension to open and read its content (The file should include the site
+         * map information)
          */
 
         String mainMenu = ("To start the application, please enter the correct file path to open (with extension like" +
@@ -66,9 +66,9 @@ public class Main {
             controller.readCommands();
             System.out.println("The simulation has ended at your request.\n"
                     + "These are the commands you issued:");
-            // print the command string list
+            // Print the command string list
             System.out.println(controller.getCommandListString());
-            // print the cost report
+            // Print the cost report
             System.out.println(controller.generateCostReport());
 
             System.out.println("Thank you for using the Aconex site clearing simulator.");
