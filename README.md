@@ -21,7 +21,7 @@ input/input1.txt
 </details>
 
 
-#### Site Clearing Simulation Usage
+#### Site Clearing Simulation Usage (with examples)
 
 **1.** Follow above steps to build and run this application.
 
@@ -227,17 +227,17 @@ Thank you for using the Aconex site clearing simulator.
    of requests coming to the application. 
    - The 2D array ```siteMap2DArray``` generated from ```SiteMap```, which will be used to create a GameController object as a
     parameter with corresponding row and column number distracted from the input site map. 
-- After creation of controller object, the application will display commands instructions for the trainee to input
- commands:
+- After creation of ```GameController``` object, the application will display commands instructions for the trainee to input
+ commands.
     - The bulldozer's initial position is defined as (-1,0), and facing East.
     - Command reading and processing, cost calculations will be handled by the ```GameController```. 
     - Command reading process will be completed by ```readCommands()``` method. ```validateCommandAndConstruct()``` method
      will be called inside of ```readCommands()``` to validate input commands and create corresponding ```Commands
      ``` object. (```AdvanceCommand``` or ```DirectionCommand```). For instance, if the input command including the
       keyword “a”, after validation the input, the AdvanceCommand object will be generated and added in the CommandList for further process. 
-    - As there are different commands for processing in this application, polymorphism and inheritance have been used. 
-    - Commands class is the parent class. DirectionCommand and AdvanceCommand are child classes inheriting from
-     Commands class. 
+    - As there are different commands for processing in this application, polymorphism and inheritance have been used
+    . ```Commands``` class is the parent class. ```DirectionCommand``` and ```AdvanceCommand``` are child classes inheriting from
+     ```Commands``` class. 
     - In each child class, excepting functions inherited from Commands class, it included corresponding functions for
      processing different types of commands.
  - Meanwhile, ```generateCostReport``` and ```computeUnclearedSquareAndCommunication()``` methods in
@@ -246,3 +246,6 @@ Thank you for using the Aconex site clearing simulator.
   displays the final cost report.
 
 </details>
+
+
+
