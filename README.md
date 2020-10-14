@@ -1,9 +1,4 @@
 #### Building, Testing and Execution Instructions
-<details><summary>Prerequisites on a mac</summary>
-
-- Java 8 sdk
-
-</details>
 
 <details><summary>Build and Execution</summary>
 
@@ -125,9 +120,8 @@ Thank you for using the Aconex site clearing simulator.
 
 <details><summary>Approach</summary>
 
-
-- Used a TDD (Test Driven Design) Approach within IntelliJ IDEA
 - Java 8, Junit 5 
+- Used a TDD (Test Driven Design) Approach within IntelliJ IDEA
 - Each source file has a javadoc comment which explains its functions and what part that file plays in the
  solution.
 - Each main feature/capability of this program has a corresponding test due to the TDD approach that has been followed.
