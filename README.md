@@ -18,7 +18,7 @@ java -jar build/libs/site-clearing-simulation.jar
 ```
 - Please type in the site map text file name and continue (press enter):
 ```bash
-input/input1.txt
+input/siteMap.txt
 ```
 </details>
 
