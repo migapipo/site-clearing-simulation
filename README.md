@@ -4,6 +4,8 @@
 - Java 8 sdk
 - Maven 3
 
+</details>
+
 ## Build and Execution
 
 To build the application:
