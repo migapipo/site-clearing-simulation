@@ -223,6 +223,21 @@ Thank you for using the Aconex site clearing simulator.
  reading it from the text file. Then, a 2D array ```siteMap2DArray``` was designed to store the value of each square on the site map for
   later processing. 
     - Boundary is managed by Array indices.
+    - Coordinates (x, y) will be encoded to an integer represents its location using the following formula in
+    ```encodeCoordinates()``` method: 
+    
+      ```location = x * COL + y;```
+      
+      In this case, current location of the bulldozer can be determined by only two parameters including one integer
+       number and direction. 
+     - Decode function ```decodeLocation()``` is used to decode the location integer in order to update the location
+      and calculate costs. The formula used for decoding is:    
+    ```
+        int x = location / COL;
+  
+        int y = location % COL;
+    ``` 
+      
 - Taking the idea of Controller pattern from GRASP, ```GameController``` class is used as the single handler for all kinds
    of requests coming to the application. 
    - The 2D array ```siteMap2DArray``` generated from ```SiteMap```, which will be used to create a GameController object as a
