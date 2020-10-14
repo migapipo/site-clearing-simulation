@@ -1,3 +1,5 @@
+```Click``` on list items to expand
+
 #### Building, Testing and Execution Instructions
 
 <details><summary>Build and Execution</summary>
