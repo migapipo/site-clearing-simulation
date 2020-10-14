@@ -1,4 +1,4 @@
-### Building, Testing and Execution Instructions
+#### Building, Testing and Execution Instructions
 <details><summary>Prerequisites on a mac</summary>
 
 - Java 8 sdk
@@ -26,7 +26,7 @@ input/input1.txt
 </details>
 
 
-### Site Clearing Simulation Usage
+#### Site Clearing Simulation Usage
 
 **1.** Follow above steps to build and run this application.
 
@@ -121,9 +121,19 @@ Thank you for using the Aconex site clearing simulator.
 ```
 
 
-### Documentation
+#### Documentation
 
-##### Folder Structure
+<details><summary>Approach</summary>
+- Used a TDD (Test Driven Design) Approach within IntelliJ IDEA
+- Java 8, Junit 5 
+- Each source file has a javadoc comment which explains its functions and what part that file plays in the
+ solution.
+- Each main feature/capability of this program has a corresponding test due to the TDD approach that has been followed.
+</details>
+
+
+<details><summary>Folder Structure</summary>
+
 
 ```bash
 ├── controller
@@ -146,8 +156,12 @@ Thank you for using the Aconex site clearing simulator.
 │   └── ParseException.java
 └── Main.java
 ```
+</details>
 
-##### Design Summary in class 
+
+<details><summary>Program Structure</summary>
+
+
 - ```controller``` folder includes only one ```GameController``` class.
     - ```GameController``` 
  
@@ -173,7 +187,9 @@ Thank you for using the Aconex site clearing simulator.
       Bulldozer class contains information about bulldozer location, direction and methods used to update location and
       direction and calculate the cost as it moves. 
    - ```SiteMap```
-    SiteMap is a utility class for read input site map and encode/decode coordinates
+    SiteMap is a utility class including just static methods for reading input site map and encoding/decoding
+     coordinates. It is stateless and cannot be instantiated, and all methods in this class can be reused across the
+      application.
 
 - ```enums``` folder includes all enum classes.
      - ```Activity``` Class is an enum class for Activity Types and its corresponding fuel usage. 
@@ -191,13 +207,6 @@ Thank you for using the Aconex site clearing simulator.
        - PLAIN("o"), ROCKY("r"), TREE_REMOVABLE("t"), TREE_PRESERVED("T")
   
   
-<details> - Prerequisites on a mac
-
-- Java 8 sdk
-
-</details>
-
-     
 - ```exceptions``` folder includes exceptions to be thrown when something goes wrong in this program. 
 
      - ```CutTreeException``` will be thrown  when the program is trying to clear a protected tree.
@@ -205,49 +214,38 @@ Thank you for using the Aconex site clearing simulator.
      - ```OutOfBoundaryException``` will be thrown if there is an attempt to navigate beyond the boundaries of the site.
        
      - ```ParseException``` will be thrown if there is any parsing errors.
-
-##### Design Summary in running order
-1.	A welcome statement will be output first: To start the application, please enter the correct file path to open (with extension like fileName.txt): 
-2.	After input a valid site map file name, this name will be used as a parameter to the application. 
-3.	The application will start with the site map file name provided and displayed the site map on the console for the trainee with a welcome message:
-Welcome to the Aconex site clearing simulator. This is a map of the site: 
-4.	The site map will be read and parsed into the program. An arraylist has been used to store the site map as a list after reading it from the text file. Then, a 2D array was designed to store the value of each square on the site map for later processing. 
-5.	Then, the program will create an object of GameController class. Taking the idea of Controller pattern from GRASP, GameController class is used as the single handler for all kinds of requests coming to the application.
-6.	After creation of controller object, the application will display commands instructions for the trainee to input commands:
-The bulldozer is currently located at the Northern edge of the site, immediately to the West of the site, and facing East.
-Command reading and processing, cost calculation functions will all be handled by the controller. 
-7.	Command reading process will be completed within the function of readCommands(), which includes the creation of the Commands object.
-8.	For the command parsing process, after the Commands object being created, validateCommandAndConstruct() method will be called to validate input commands and generate corresponding command type objects. For instance, if the input command including the keyword “a”, after validation the input, the AdvanceCommand object will be generated and added in the CommandList for further process. 
-Design idea: As there are different commands for processing in this application, polymorphism and inheritance have been used. Commands class is the parent class, while DirectionCommand and AdvanceCommand are child classes inheriting from Commands class. In each child class, excepting functions inherited from Commands class, it included corresponding functions for processing different types of commands.  
-9.	Meanwhile, SiteMap object will be created in GameController for cost calculation. SiteMap Class played as a utility class in this case, which contains just static methods, it is stateless and cannot be instantiated. It contains a bunch of related methods for read input site map and encode/decode coordinates, so they can be reused across the application.
+</details>
 
 
+<details><summary>Design Summary</summary>
 
+- ```Main``` is the entry of this program. 
+- ```SiteMap``` class is used to process the siteMap file and complete the mapping between locations and coordiates.
+    - As soon as the program is lauched, the site map will be read and parsed into the program using ```readInputSiteMap
+``` and ```parseSiteMapListToArray``` methods. An arraylist ```siteMapList```  has been used to store the site map as a list after
+ reading it from the text file. Then, a 2D array ```siteMap2DArray``` was designed to store the value of each square on the site map for
+  later processing. 
+    - Boundary is managed by Array indices.
+- Taking the idea of Controller pattern from GRASP, ```GameController``` class is used as the single handler for all kinds
+   of requests coming to the application. 
+   - The 2D array ```siteMap2DArray``` generated from ```SiteMap```, which will be used to create a GameController object as a
+    parameter with corresponding row and column number distracted from the input site map. 
+- After creation of controller object, the application will display commands instructions for the trainee to input
+ commands:
+    - The bulldozer's initial position is defined as (-1,0), and facing East.
+    - Command reading and processing, cost calculations will be handled by the ```GameController```. 
+    - Command reading process will be completed by ```readCommands()``` method. ```validateCommandAndConstruct()``` method
+     will be called inside of ```readCommands()``` to validate input commands and create corresponding ```Commands
+     ``` object. (```AdvanceCommand``` or ```DirectionCommand```). For instance, if the input command including the
+      keyword “a”, after validation the input, the AdvanceCommand object will be generated and added in the CommandList for further process. 
+    - As there are different commands for processing in this application, polymorphism and inheritance have been used. 
+    - Commands class is the parent class. DirectionCommand and AdvanceCommand are child classes inheriting from
+     Commands class. 
+    - In each child class, excepting functions inherited from Commands class, it included corresponding functions for
+     processing different types of commands.
+ - Meanwhile, ```generateCostReport``` and ```computeUnclearedSquareAndCommunication()``` methods in
+  ```GameController``` are used for cost calculation and generate itemised cost report. 
+ - Finally, ```getCommandListString()``` will display the commands list including all input commands in string and
+  displays the final cost report.
 
-##### Overall structure
-
-- The GameController class played as a single handler for all kinds of requests.
-- A 2D array has been used to store the site map. When application starts, the site is loaded from provided input
- site map file.
-- Transitions of the bulldozer are encapsulated via the command pattern.
-- Boundary is managed by Array indices.
-- The site data is then sent to the  `SiteMap` class for parsing and generating the site information. 
-- The `CommandProcessor` then applies the commands on the `Bulldozer` to get the possible traversed path. 
-- `CommandProcessor` checks the List of positions for possible rule violations and alongside updates
- the cost-item in bulldozer. 
-- Finally `CostCalcualtor` finds and displays the cost
-
-1.	A welcome statement will be output first: To start the application, please enter the correct file path to open (with extension like fileName.txt): 
-2.	After input a valid site map file name, this name will be used as a parameter to the application. 
-3.	The application will start with the site map file name provided and displayed the site map on the console for the trainee with a welcome message:
-Welcome to the Aconex site clearing simulator. This is a map of the site: 
-4.	The site map will be read and parsed into the program. An arraylist has been used to store the site map as a list after reading it from the text file. Then, a 2D array was designed to store the value of each square on the site map for later processing. 
-5.	Then, the program will create an object of GameController class. Taking the idea of Controller pattern from GRASP, GameController class is used as the single handler for all kinds of requests coming to the application.
-6.	After creation of controller object, the application will display commands instructions for the trainee to input commands:
-The bulldozer is currently located at the Northern edge of the site, immediately to the West of the site, and facing East.
-Command reading and processing, cost calculation functions will all be handled by the controller. 
-7.	Command reading process will be completed within the function of readCommands(), which includes the creation of the Commands object.
-8.	For the command parsing process, after the Commands object being created, validateCommandAndConstruct() method will be called to validate input commands and generate corresponding command type objects. For instance, if the input command including the keyword “a”, after validation the input, the AdvanceCommand object will be generated and added in the CommandList for further process. 
-Design idea: As there are different commands for processing in this application, polymorphism and inheritance have been used. Commands class is the parent class, while DirectionCommand and AdvanceCommand are child classes inheriting from Commands class. In each child class, excepting functions inherited from Commands class, it included corresponding functions for processing different types of commands.  
-9.	Meanwhile, SiteMap object will be created in GameController for cost calculation. SiteMap Class played as a utility class in this case, which contains just static methods, it is stateless and cannot be instantiated. It contains a bunch of related methods for read input site map and encode/decode coordinates, so they can be reused across the application.
-
+</details>
