@@ -4,7 +4,8 @@ import app.enums.CommandType;
 import app.exceptions.ParseException;
 
 /**
- * The app.Main program implements ...
+ * Commands class is used to validate the input command and generate corresponding command objects according to the
+ * input command types.
  * <p>
  * A - Advance: this command takes a positive integer parameter to define the
  * number of squares the bulldozer should move forwards (in whatever direction

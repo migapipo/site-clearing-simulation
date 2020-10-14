@@ -13,7 +13,9 @@ import java.util.Map;
 
 /**
  * Bulldozer class contains information about bulldozer location, direction and methods used to update location and
- * direction and calculate the cost as it moves.
+ * direction and calculate the cost as it moves. Functions related to the movement of the bulldozer are encapsulated in
+ * this class. This class is used to execute move commands, track the movement and update the location of the
+ * bulldozer. Also, computeCostPerStep method is included for calculating cost & overhead for per step.
  */
 public class Bulldozer {
 

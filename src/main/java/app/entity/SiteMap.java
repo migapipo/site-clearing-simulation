@@ -9,7 +9,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 /**
- * SiteMap is a util class for read input site map and encode/decode coordinates
+ * SiteMap is a util class with static methods, which are for read and parse input site map file and encode/decode
+ * coordinates
  */
 public class SiteMap {
 
