@@ -1,32 +1,32 @@
-## Building, Testing and Execution Instructions
+### Building, Testing and Execution Instructions
 <details><summary>Prerequisites on a mac</summary>
 
 - Java 8 sdk
-- Maven 3
 
 </details>
 
-## Build and Execution
+<details><summary>Build and Execution</summary>
 
-To build the application:
+- To build the application:
 ```bash
 ./gradlew clean build
 ```
-To run the jar:
+-  To run the jar:
 ```bash
 java -jar build/libs/site-clearing-simulation.jar 
 ```
-If you run above command successfully, you will see an instruction asking for the input site map file name: 
+- If you run above command successfully, you will see an instruction asking for the input site map file name: 
 ```bash
 "To start the application, please enter the correct file path to open (with extension like fileName.txt) : "
 ```
-Please type in the site map text file name and continue (press enter):
+- Please type in the site map text file name and continue (press enter):
 ```bash
 input/input1.txt
 ```
+</details>
 
 
-##Site Clearing Simulation Usage
+## Site Clearing Simulation Usage
 
 **1.** Follow above steps to build and run this application.
 
